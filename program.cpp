@@ -1,5 +1,5 @@
 #include "loginForm.h"
-//#include "SchoolDashBoard.h"
+#include "DashBoard.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -11,13 +11,13 @@ int main()//(array<String^> arags)
 
 	UED::LoginForm loginForm;
 	loginForm.ShowDialog();
-	School^ school = loginForm.school;
+	Schooldata^ school = loginForm.school;
 
 	if (school != nullptr)
 	{
-		//UED::SchoolDashBoard dashB;
-		//dashB.ShowDialog();
-		MessageBox::Show("Access Granted", "Login Authentication", MessageBoxButtons::OK);
+		School::DashBoard dashB;
+		dashB.ShowDialog();
+		//MessageBox::Show("Access Granted", "Login Authentication", MessageBoxButtons::OK);
 	}
 	else
 	{

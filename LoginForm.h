@@ -81,6 +81,7 @@ namespace UED {
 			this->Loginlabel->Size = System::Drawing::Size(118, 46);
 			this->Loginlabel->TabIndex = 0;
 			this->Loginlabel->Text = L"Login";
+			this->Loginlabel->Click += gcnew System::EventHandler(this, &LoginForm::Loginlabel_Click);
 			// 
 			// IDtextBox
 			// 
@@ -161,7 +162,7 @@ namespace UED {
 
 		}
 #pragma endregion
-		public: School^ school = nullptr;
+		public: Schooldata^ school = nullptr;
 		private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e)
 		{
 		}
@@ -195,7 +196,7 @@ namespace UED {
 				SqlDataReader^ reader = command.ExecuteReader();
 				if (reader->Read())
 				{
-					school = gcnew School;
+					school = gcnew Schooldata;
 					school->Id = reader->GetInt32(0);
 					school->Name = reader->GetString(1);
 					school->Details = reader->GetString(3);
@@ -213,5 +214,7 @@ namespace UED {
 				MessageBox::Show("Failed To Connect to the database" + sizeof(e), "Connection Error", MessageBoxButtons::OK);
 			}
 		}
-	};
+	private: System::Void Loginlabel_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
