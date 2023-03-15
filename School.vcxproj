@@ -123,10 +123,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DashBoard.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="program.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DashBoard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Data.h" />
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
