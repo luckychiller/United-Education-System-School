@@ -142,6 +142,27 @@ private: System::Windows::Forms::Label^ label39;
 private: System::Windows::Forms::Label^ RemTechCaptchlabel;
 private: System::Windows::Forms::Label^ label37;
 private: System::Windows::Forms::Label^ label35;
+private: System::Windows::Forms::Label^ PayFeelabel;
+
+private: System::Windows::Forms::TextBox^ PayIDBox;
+private: System::Windows::Forms::Button^ PayConfirmbutton;
+
+private: System::Windows::Forms::Button^ PayCancelbutton;
+
+private: System::Windows::Forms::TextBox^ FeesPayAmountBox;
+
+private: System::Windows::Forms::Label^ label47;
+private: System::Windows::Forms::Label^ PayClasslabel;
+
+private: System::Windows::Forms::Label^ PayNamelabel;
+
+private: System::Windows::Forms::Button^ PaySearchbutton;
+private: System::Windows::Forms::Label^ label44;
+private: System::Windows::Forms::Label^ label43;
+private: System::Windows::Forms::Label^ label42;
+private: System::Windows::Forms::Label^ label41;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::Label^ label38;
 
 
 	private:
@@ -252,6 +273,21 @@ private: System::Windows::Forms::Label^ label35;
 			this->RemTechConfirmbutton = (gcnew System::Windows::Forms::Button());
 			this->RemTechIDBox = (gcnew System::Windows::Forms::TextBox());
 			this->RemTechCaptBox = (gcnew System::Windows::Forms::TextBox());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->label44 = (gcnew System::Windows::Forms::Label());
+			this->PaySearchbutton = (gcnew System::Windows::Forms::Button());
+			this->PayNamelabel = (gcnew System::Windows::Forms::Label());
+			this->PayClasslabel = (gcnew System::Windows::Forms::Label());
+			this->label47 = (gcnew System::Windows::Forms::Label());
+			this->FeesPayAmountBox = (gcnew System::Windows::Forms::TextBox());
+			this->PayCancelbutton = (gcnew System::Windows::Forms::Button());
+			this->PayConfirmbutton = (gcnew System::Windows::Forms::Button());
+			this->PayIDBox = (gcnew System::Windows::Forms::TextBox());
+			this->PayFeelabel = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tab3->SuspendLayout();
 			this->tabPage4->SuspendLayout();
@@ -259,6 +295,7 @@ private: System::Windows::Forms::Label^ label35;
 			this->tabPage6->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage7->SuspendLayout();
+			this->tabPage3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -654,6 +691,21 @@ private: System::Windows::Forms::Label^ label35;
 			// 
 			// tabPage3
 			// 
+			this->tabPage3->Controls->Add(this->PayFeelabel);
+			this->tabPage3->Controls->Add(this->PayIDBox);
+			this->tabPage3->Controls->Add(this->PayConfirmbutton);
+			this->tabPage3->Controls->Add(this->PayCancelbutton);
+			this->tabPage3->Controls->Add(this->FeesPayAmountBox);
+			this->tabPage3->Controls->Add(this->label47);
+			this->tabPage3->Controls->Add(this->PayClasslabel);
+			this->tabPage3->Controls->Add(this->PayNamelabel);
+			this->tabPage3->Controls->Add(this->PaySearchbutton);
+			this->tabPage3->Controls->Add(this->label44);
+			this->tabPage3->Controls->Add(this->label43);
+			this->tabPage3->Controls->Add(this->label42);
+			this->tabPage3->Controls->Add(this->label41);
+			this->tabPage3->Controls->Add(this->label40);
+			this->tabPage3->Controls->Add(this->label38);
 			this->tabPage3->Location = System::Drawing::Point(4, 22);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
@@ -1186,6 +1238,140 @@ private: System::Windows::Forms::Label^ label35;
 			this->RemTechCaptBox->Size = System::Drawing::Size(244, 20);
 			this->RemTechCaptBox->TabIndex = 7;
 			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Segoe Print", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label38->Location = System::Drawing::Point(263, 6);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(125, 36);
+			this->label38->TabIndex = 0;
+			this->label38->Text = L"SchoolFees";
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Location = System::Drawing::Point(100, 87);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(58, 13);
+			this->label40->TabIndex = 1;
+			this->label40->Text = L"Student ID";
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->Location = System::Drawing::Point(219, 154);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(32, 13);
+			this->label41->TabIndex = 2;
+			this->label41->Text = L"Class";
+			// 
+			// label42
+			// 
+			this->label42->AutoSize = true;
+			this->label42->Location = System::Drawing::Point(216, 126);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(35, 13);
+			this->label42->TabIndex = 3;
+			this->label42->Text = L"Name";
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->Location = System::Drawing::Point(179, 185);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(72, 13);
+			this->label43->TabIndex = 4;
+			this->label43->Text = L"Fees Balance";
+			// 
+			// label44
+			// 
+			this->label44->AutoSize = true;
+			this->label44->Location = System::Drawing::Point(152, 268);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(108, 13);
+			this->label44->TabIndex = 5;
+			this->label44->Text = L"Enter Amount To Pay";
+			// 
+			// PaySearchbutton
+			// 
+			this->PaySearchbutton->Location = System::Drawing::Point(493, 77);
+			this->PaySearchbutton->Name = L"PaySearchbutton";
+			this->PaySearchbutton->Size = System::Drawing::Size(75, 23);
+			this->PaySearchbutton->TabIndex = 6;
+			this->PaySearchbutton->Text = L"Search";
+			this->PaySearchbutton->UseVisualStyleBackColor = true;
+			// 
+			// PayNamelabel
+			// 
+			this->PayNamelabel->AutoSize = true;
+			this->PayNamelabel->Location = System::Drawing::Point(297, 126);
+			this->PayNamelabel->Name = L"PayNamelabel";
+			this->PayNamelabel->Size = System::Drawing::Size(41, 13);
+			this->PayNamelabel->TabIndex = 7;
+			this->PayNamelabel->Text = L"label45";
+			// 
+			// PayClasslabel
+			// 
+			this->PayClasslabel->AutoSize = true;
+			this->PayClasslabel->Location = System::Drawing::Point(297, 154);
+			this->PayClasslabel->Name = L"PayClasslabel";
+			this->PayClasslabel->Size = System::Drawing::Size(41, 13);
+			this->PayClasslabel->TabIndex = 8;
+			this->PayClasslabel->Text = L"label46";
+			// 
+			// label47
+			// 
+			this->label47->AutoSize = true;
+			this->label47->Location = System::Drawing::Point(296, 185);
+			this->label47->Name = L"label47";
+			this->label47->Size = System::Drawing::Size(13, 13);
+			this->label47->TabIndex = 9;
+			this->label47->Text = L"$";
+			// 
+			// FeesPayAmountBox
+			// 
+			this->FeesPayAmountBox->Location = System::Drawing::Point(289, 261);
+			this->FeesPayAmountBox->Name = L"FeesPayAmountBox";
+			this->FeesPayAmountBox->Size = System::Drawing::Size(199, 20);
+			this->FeesPayAmountBox->TabIndex = 10;
+			this->FeesPayAmountBox->TextChanged += gcnew System::EventHandler(this, &DashBoard::textBox1_TextChanged);
+			// 
+			// PayCancelbutton
+			// 
+			this->PayCancelbutton->Location = System::Drawing::Point(146, 346);
+			this->PayCancelbutton->Name = L"PayCancelbutton";
+			this->PayCancelbutton->Size = System::Drawing::Size(75, 23);
+			this->PayCancelbutton->TabIndex = 11;
+			this->PayCancelbutton->Text = L"Cancel";
+			this->PayCancelbutton->UseVisualStyleBackColor = true;
+			// 
+			// PayConfirmbutton
+			// 
+			this->PayConfirmbutton->Location = System::Drawing::Point(416, 346);
+			this->PayConfirmbutton->Name = L"PayConfirmbutton";
+			this->PayConfirmbutton->Size = System::Drawing::Size(75, 23);
+			this->PayConfirmbutton->TabIndex = 12;
+			this->PayConfirmbutton->Text = L"Confirm";
+			this->PayConfirmbutton->UseVisualStyleBackColor = true;
+			// 
+			// PayIDBox
+			// 
+			this->PayIDBox->Location = System::Drawing::Point(184, 80);
+			this->PayIDBox->Name = L"PayIDBox";
+			this->PayIDBox->Size = System::Drawing::Size(241, 20);
+			this->PayIDBox->TabIndex = 13;
+			// 
+			// PayFeelabel
+			// 
+			this->PayFeelabel->AutoSize = true;
+			this->PayFeelabel->Location = System::Drawing::Point(315, 185);
+			this->PayFeelabel->Name = L"PayFeelabel";
+			this->PayFeelabel->Size = System::Drawing::Size(41, 13);
+			this->PayFeelabel->TabIndex = 14;
+			this->PayFeelabel->Text = L"label48";
+			// 
 			// DashBoard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1219,6 +1405,8 @@ private: System::Windows::Forms::Label^ label35;
 			this->tabPage1->PerformLayout();
 			this->tabPage7->ResumeLayout(false);
 			this->tabPage7->PerformLayout();
+			this->tabPage3->ResumeLayout(false);
+			this->tabPage3->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1232,6 +1420,8 @@ private: System::Windows::Forms::Label^ label35;
 	private: System::Void label12_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void label34_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
