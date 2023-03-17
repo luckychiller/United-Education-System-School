@@ -81,7 +81,6 @@ namespace UED {
 			this->Loginlabel->Size = System::Drawing::Size(118, 46);
 			this->Loginlabel->TabIndex = 0;
 			this->Loginlabel->Text = L"Login";
-			this->Loginlabel->Click += gcnew System::EventHandler(this, &LoginForm::Loginlabel_Click);
 			// 
 			// IDtextBox
 			// 
@@ -211,10 +210,8 @@ namespace UED {
 			}
 			catch (Exception^ e)
 			{
-				MessageBox::Show("Failed To Connect to the database" + sizeof(e), "Connection Error", MessageBoxButtons::OK);
+				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
 			}
 		}
-	private: System::Void Loginlabel_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-};
+	};
 }

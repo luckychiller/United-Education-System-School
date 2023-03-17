@@ -15,9 +15,8 @@ int main()//(array<String^> arags)
 
 	if (school != nullptr)
 	{
-		School::DashBoard dashB;
+		School::DashBoard dashB(school->Id,school->Name,school->Details,school->Password);
 		dashB.ShowDialog();
-		//MessageBox::Show("Access Granted", "Login Authentication", MessageBoxButtons::OK);
 	}
 	else
 	{
