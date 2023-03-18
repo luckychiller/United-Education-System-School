@@ -79,133 +79,126 @@ namespace School {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ label1;
-	protected:
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ TeacherNolabel;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ StudentsNolabel;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ CourseNolabel;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Label^ BalanceNolabel;
-	private: System::Windows::Forms::TabControl^ Schooltab;
-	private: System::Windows::Forms::TabPage^ OverviewPage;
-	private: System::Windows::Forms::TabPage^ AddStudentPage;
-	private: System::Windows::Forms::Label^ label16;
-	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::Label^ label14;
-	private: System::Windows::Forms::Label^ label13;
-	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::TabPage^ AddTeacherPage;
-	private: System::Windows::Forms::TabPage^ RemoveStudentPage;
-	private: System::Windows::Forms::TabPage^ RemoveTeacherPage;
-	private: System::Windows::Forms::TabPage^ AddCoursePage;
-	private: System::Windows::Forms::TabPage^ RemoveCoursePage;
-	private: System::Windows::Forms::Label^ label19;
-	private: System::Windows::Forms::ComboBox^ PGenderComboBox;
-	private: System::Windows::Forms::DateTimePicker^ StdDOBdate;
-	private: System::Windows::Forms::ComboBox^ ClassComboBox;
-	private: System::Windows::Forms::ComboBox^ StdGenderComboBox;
-	private: System::Windows::Forms::TextBox^ FeesTextBox;
-	private: System::Windows::Forms::TextBox^ PPassTextBox;
-	private: System::Windows::Forms::TextBox^ PContacttextBox;
-	private: System::Windows::Forms::TextBox^ PNametextBox;
-	private: System::Windows::Forms::TextBox^ CaptchaTextBox;
-	private: System::Windows::Forms::TextBox^ StdPassTextBox;
-	private: System::Windows::Forms::TextBox^ StdNameBox;
-	private: System::Windows::Forms::Label^ label18;
-	private: System::Windows::Forms::Button^ StdConfirmButton;
-	private: System::Windows::Forms::Button^ CancelButton;
-	private: System::Windows::Forms::Label^ CaptchaLabel;
-	private: System::Windows::Forms::Label^ label24;
-	private: System::Windows::Forms::Label^ CaptchaCourse;
-	private: System::Windows::Forms::Label^ label20;
-	private: System::Windows::Forms::Label^ label17;
-	private: System::Windows::Forms::TabPage^ UpdateFeesPage;
-	private: System::Windows::Forms::Button^ CourseConfirmbutton;
-	private: System::Windows::Forms::Button^ CourseCancelbutton;
-	private: System::Windows::Forms::Label^ label21;
-	private: System::Windows::Forms::ComboBox^ AddTechGenderCmboBox;
-	private: System::Windows::Forms::TextBox^ AddTechCaptchBox;
-	private: System::Windows::Forms::TextBox^ AddTechCourseBox;
-	private: System::Windows::Forms::TextBox^ AddTechPassBox;
-	private: System::Windows::Forms::TextBox^ AddTechNameBox;
-	private: System::Windows::Forms::Button^ addTechConfbutton;
-	private: System::Windows::Forms::Button^ AddTechCancelbutton;
-	private: System::Windows::Forms::Label^ label36;
-	private: System::Windows::Forms::Label^ AddTechCaptchaLabel;
-	private: System::Windows::Forms::Label^ label34;
-	private: System::Windows::Forms::Label^ label33;
-	private: System::Windows::Forms::Label^ label32;
-	private: System::Windows::Forms::Label^ label31;
-	private: System::Windows::Forms::Label^ label29;
-	private: System::Windows::Forms::Label^ label27;
-	private: System::Windows::Forms::Label^ RemStdCptlabel;
-	private: System::Windows::Forms::TextBox^ RemStdCaptchatextBox;
-	private: System::Windows::Forms::TextBox^ RemStdIDBox;
-	private: System::Windows::Forms::Button^ RemStdConfirmbutton;
-	private: System::Windows::Forms::Button^ RemStdCancelbutton;
-	private: System::Windows::Forms::Label^ label25;
-	private: System::Windows::Forms::Label^ label23;
-	private: System::Windows::Forms::Label^ label22;
-	private: System::Windows::Forms::TextBox^ CourseCaptchBox;
-	private: System::Windows::Forms::TextBox^ CourseDetailBox;
-	private: System::Windows::Forms::TextBox^ CourseNameBox;
-	private: System::Windows::Forms::TextBox^ RemCourseCaptcBox;
-	private: System::Windows::Forms::TextBox^ RemCourseIDBox;
-	private: System::Windows::Forms::Button^ RemCourseConfirmbutton;
-	private: System::Windows::Forms::Button^ RemCourseCancelbutton;
-	private: System::Windows::Forms::Label^ label30;
-	private: System::Windows::Forms::Label^ RemCourseCaptlabel;
-	private: System::Windows::Forms::Label^ label28;
-	private: System::Windows::Forms::Label^ label26;
-private: System::Windows::Forms::TextBox^ RemTechCaptBox;
-private: System::Windows::Forms::TextBox^ RemTechIDBox;
-private: System::Windows::Forms::Button^ RemTechConfirmbutton;
-private: System::Windows::Forms::Button^ RemTechCancelbutton;
-private: System::Windows::Forms::Label^ label39;
-private: System::Windows::Forms::Label^ RemTechCaptchlabel;
-private: System::Windows::Forms::Label^ label37;
-private: System::Windows::Forms::Label^ label35;
-private: System::Windows::Forms::Label^ PayFeelabel;
-private: System::Windows::Forms::TextBox^ PayIDBox;
-private: System::Windows::Forms::Button^ PayConfirmbutton;
-private: System::Windows::Forms::Button^ PayCancelbutton;
-private: System::Windows::Forms::TextBox^ FeesPayAmountBox;
-private: System::Windows::Forms::Label^ label47;
-private: System::Windows::Forms::Label^ PayClasslabel;
-private: System::Windows::Forms::Label^ PayNamelabel;
-private: System::Windows::Forms::Button^ PaySearchbutton;
-private: System::Windows::Forms::Label^ label44;
-private: System::Windows::Forms::Label^ label43;
-private: System::Windows::Forms::Label^ label42;
-private: System::Windows::Forms::Label^ label41;
-private: System::Windows::Forms::Label^ label40;
-private: System::Windows::Forms::Label^ label38;
-private: System::Windows::Forms::Label^ TotalRecordsLabel;
-private: System::Windows::Forms::Label^ label45;
-private: System::Windows::Forms::Button^ SearchDataButton;
-private: System::Windows::Forms::ComboBox^ comboBox4;
-private: System::Windows::Forms::ComboBox^ comboBox3;
-private: System::Windows::Forms::ComboBox^ comboBox2;
-private: System::Windows::Forms::ComboBox^ comboBox1;
-private: System::Windows::Forms::DataGridView^ dataGridView1;
-private: System::Windows::Forms::Button^ CancelDatabutton;
-
-
-	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		System::ComponentModel::Container ^components;
+		private: System::Windows::Forms::Label^ label1;
+		private: System::Windows::Forms::Button^ button1;
+		private: System::Windows::Forms::Label^ label2;
+		private: System::Windows::Forms::Label^ TeacherNolabel;
+		private: System::Windows::Forms::Label^ label3;
+		private: System::Windows::Forms::Label^ StudentsNolabel;
+		private: System::Windows::Forms::Label^ label4;
+		private: System::Windows::Forms::Label^ CourseNolabel;
+		private: System::Windows::Forms::Label^ label5;
+		private: System::Windows::Forms::Label^ label6;
+		private: System::Windows::Forms::Label^ BalanceNolabel;
+		private: System::Windows::Forms::TabControl^ Schooltab;
+		private: System::Windows::Forms::TabPage^ OverviewPage;
+		private: System::Windows::Forms::TabPage^ AddStudentPage;
+		private: System::Windows::Forms::Label^ label16;
+		private: System::Windows::Forms::Label^ label15;
+		private: System::Windows::Forms::Label^ label14;
+		private: System::Windows::Forms::Label^ label13;
+		private: System::Windows::Forms::Label^ label12;
+		private: System::Windows::Forms::Label^ label11;
+		private: System::Windows::Forms::Label^ label10;
+		private: System::Windows::Forms::Label^ label9;
+		private: System::Windows::Forms::Label^ label8;
+		private: System::Windows::Forms::Label^ label7;
+		private: System::Windows::Forms::TabPage^ AddTeacherPage;
+		private: System::Windows::Forms::TabPage^ RemoveStudentPage;
+		private: System::Windows::Forms::TabPage^ RemoveTeacherPage;
+		private: System::Windows::Forms::TabPage^ AddCoursePage;
+		private: System::Windows::Forms::TabPage^ RemoveCoursePage;
+		private: System::Windows::Forms::Label^ label19;
+		private: System::Windows::Forms::ComboBox^ PGenderComboBox;
+		private: System::Windows::Forms::DateTimePicker^ StdDOBdate;
+		private: System::Windows::Forms::ComboBox^ ClassComboBox;
+		private: System::Windows::Forms::ComboBox^ StdGenderComboBox;
+		private: System::Windows::Forms::TextBox^ FeesTextBox;
+		private: System::Windows::Forms::TextBox^ PPassTextBox;
+		private: System::Windows::Forms::TextBox^ PContacttextBox;
+		private: System::Windows::Forms::TextBox^ PNametextBox;
+		private: System::Windows::Forms::TextBox^ CaptchaTextBox;
+		private: System::Windows::Forms::TextBox^ StdPassTextBox;
+		private: System::Windows::Forms::TextBox^ StdNameBox;
+		private: System::Windows::Forms::Label^ label18;
+		private: System::Windows::Forms::Button^ StdConfirmButton;
+		private: System::Windows::Forms::Button^ CancelButton;
+		private: System::Windows::Forms::Label^ CaptchaLabel;
+		private: System::Windows::Forms::Label^ label24;
+		private: System::Windows::Forms::Label^ CaptchaCourse;
+		private: System::Windows::Forms::Label^ label20;
+		private: System::Windows::Forms::Label^ label17;
+		private: System::Windows::Forms::TabPage^ UpdateFeesPage;
+		private: System::Windows::Forms::Button^ CourseConfirmbutton;
+		private: System::Windows::Forms::Button^ CourseCancelbutton;
+		private: System::Windows::Forms::Label^ label21;
+		private: System::Windows::Forms::ComboBox^ AddTechGenderCmboBox;
+		private: System::Windows::Forms::TextBox^ AddTechCaptchBox;
+		private: System::Windows::Forms::TextBox^ AddTechCourseBox;
+		private: System::Windows::Forms::TextBox^ AddTechPassBox;
+		private: System::Windows::Forms::TextBox^ AddTechNameBox;
+		private: System::Windows::Forms::Button^ addTechConfbutton;
+		private: System::Windows::Forms::Button^ AddTechCancelbutton;
+		private: System::Windows::Forms::Label^ label36;
+		private: System::Windows::Forms::Label^ AddTechCaptchaLabel;
+		private: System::Windows::Forms::Label^ label34;
+		private: System::Windows::Forms::Label^ label33;
+		private: System::Windows::Forms::Label^ label32;
+		private: System::Windows::Forms::Label^ label31;
+		private: System::Windows::Forms::Label^ label29;
+		private: System::Windows::Forms::Label^ label27;
+		private: System::Windows::Forms::Label^ RemStdCptlabel;
+		private: System::Windows::Forms::TextBox^ RemStdCaptchatextBox;
+		private: System::Windows::Forms::TextBox^ RemStdIDBox;
+		private: System::Windows::Forms::Button^ RemStdConfirmbutton;
+		private: System::Windows::Forms::Button^ RemStdCancelbutton;
+		private: System::Windows::Forms::Label^ label25;
+		private: System::Windows::Forms::Label^ label23;
+		private: System::Windows::Forms::Label^ label22;
+		private: System::Windows::Forms::TextBox^ CourseCaptchBox;
+		private: System::Windows::Forms::TextBox^ CourseDetailBox;
+		private: System::Windows::Forms::TextBox^ CourseNameBox;
+		private: System::Windows::Forms::TextBox^ RemCourseCaptcBox;
+		private: System::Windows::Forms::TextBox^ RemCourseIDBox;
+		private: System::Windows::Forms::Button^ RemCourseConfirmbutton;
+		private: System::Windows::Forms::Button^ RemCourseCancelbutton;
+		private: System::Windows::Forms::Label^ label30;
+		private: System::Windows::Forms::Label^ RemCourseCaptlabel;
+		private: System::Windows::Forms::Label^ label28;
+		private: System::Windows::Forms::Label^ label26;
+		private: System::Windows::Forms::TextBox^ RemTechCaptBox;
+		private: System::Windows::Forms::TextBox^ RemTechIDBox;
+		private: System::Windows::Forms::Button^ RemTechConfirmbutton;
+		private: System::Windows::Forms::Button^ RemTechCancelbutton;
+		private: System::Windows::Forms::Label^ label39;
+		private: System::Windows::Forms::Label^ RemTechCaptchlabel;
+		private: System::Windows::Forms::Label^ label37;
+		private: System::Windows::Forms::Label^ label35;
+		private: System::Windows::Forms::Label^ PayFeelabel;
+		private: System::Windows::Forms::TextBox^ PayIDBox;
+		private: System::Windows::Forms::Button^ PayConfirmbutton;
+		private: System::Windows::Forms::Button^ PayCancelbutton;
+		private: System::Windows::Forms::TextBox^ FeesPayAmountBox;
+		private: System::Windows::Forms::Label^ label47;
+		private: System::Windows::Forms::Label^ PayClasslabel;
+		private: System::Windows::Forms::Label^ PayNamelabel;
+		private: System::Windows::Forms::Button^ PaySearchbutton;
+		private: System::Windows::Forms::Label^ label44;
+		private: System::Windows::Forms::Label^ label43;
+		private: System::Windows::Forms::Label^ label42;
+		private: System::Windows::Forms::Label^ label41;
+		private: System::Windows::Forms::Label^ label40;
+		private: System::Windows::Forms::Label^ label38;
+		private: System::Windows::Forms::Label^ TotalRecordsLabel;
+		private: System::Windows::Forms::Label^ label45;
+		private: System::Windows::Forms::Button^ SearchDataButton;
+		private: System::Windows::Forms::ComboBox^ comboBox4;
+		private: System::Windows::Forms::ComboBox^ comboBox3;
+		private: System::Windows::Forms::ComboBox^ comboBox2;
+		private: System::Windows::Forms::ComboBox^ comboBox1;
+		private: System::Windows::Forms::DataGridView^ dataGridView1;
+		private: System::Windows::Forms::Button^ CancelDatabutton;
+		private:System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -348,8 +341,7 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Algerian", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->label1->Font = (gcnew System::Drawing::Font(L"Algerian", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(306, 9);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(167, 35);
@@ -547,8 +539,7 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			// 
 			// comboBox1
 			// 
-			this->comboBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->comboBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Location = System::Drawing::Point(137, 4);
 			this->comboBox1->Name = L"comboBox1";
@@ -645,7 +636,8 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			// ClassComboBox
 			// 
 			this->ClassComboBox->FormattingEnabled = true;
-			this->ClassComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(10) {
+			this->ClassComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(10) 
+			{
 				L"1", L"2", L"3", L"4", L"5", L"6", L"7", L"8",
 					L"9", L"10"
 			});
@@ -1041,6 +1033,7 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			this->RemStdConfirmbutton->TabIndex = 3;
 			this->RemStdConfirmbutton->Text = L"Confirm";
 			this->RemStdConfirmbutton->UseVisualStyleBackColor = true;
+			this->RemStdConfirmbutton->Click += gcnew System::EventHandler(this, &DashBoard::RemStdConfirmbutton_Click);
 			// 
 			// RemStdCancelbutton
 			// 
@@ -1111,6 +1104,7 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			this->RemTechConfirmbutton->TabIndex = 5;
 			this->RemTechConfirmbutton->Text = L"Confirm";
 			this->RemTechConfirmbutton->UseVisualStyleBackColor = true;
+			this->RemTechConfirmbutton->Click += gcnew System::EventHandler(this, &DashBoard::RemTechConfirmbutton_Click);
 			// 
 			// RemTechCancelbutton
 			// 
@@ -1218,6 +1212,7 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			this->CourseConfirmbutton->TabIndex = 7;
 			this->CourseConfirmbutton->Text = L"Confirm";
 			this->CourseConfirmbutton->UseVisualStyleBackColor = true;
+			this->CourseConfirmbutton->Click += gcnew System::EventHandler(this, &DashBoard::CourseConfirmbutton_Click);
 			// 
 			// CourseCancelbutton
 			// 
@@ -1347,8 +1342,7 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			// label26
 			// 
 			this->label26->AutoSize = true;
-			this->label26->Font = (gcnew System::Drawing::Font(L"Segoe Print", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->label26->Font = (gcnew System::Drawing::Font(L"Segoe Print", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
 			this->label26->Location = System::Drawing::Point(224, 31);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(247, 36);
@@ -1559,13 +1553,11 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 		{
 			this->Close();
 		}
-
 		private: System::Void PayCancelbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
 			this->PayIDBox->Clear();
 			this->FeesPayAmountBox->Clear();
 		}
-
 		private: System::Void RemCourseCancelbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
 			this->RemCourseIDBox->Clear();
@@ -1577,19 +1569,16 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			this->CourseDetailBox->Clear();
 			this->CourseCaptchBox->Clear();
 		}
-
 		private: System::Void RemTechCancelbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
 			this->RemTechIDBox->Clear();
 			this->RemTechCaptBox->Clear();
 		}
-
 		private: System::Void RemStdCancelbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
 			this->RemStdIDBox->Clear();
 			this->RemStdCaptchatextBox->Clear();
 		}
-
 		private: System::Void AddTechCancelbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
 			this->AddTechNameBox->Clear();
@@ -1598,7 +1587,6 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 			this->AddTechGenderCmboBox->Refresh();
 			this->AddTechPassBox->Clear();
 		}
-
 		private: System::Void CancelButton_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
 			this->StdNameBox->Clear();
@@ -1676,8 +1664,181 @@ private: System::Windows::Forms::Button^ CancelDatabutton;
 				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
 			}
 		}
-private: System::Void RemCourseConfirmbutton_Click(System::Object^ sender, System::EventArgs^ e) 
-{
-}
-};
+		private: System::Void RemCourseConfirmbutton_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
+			String^ CourseeID = this->RemCourseIDBox->Text;
+			String^ Bitt = this->RemCourseCaptcBox->Text;
+			if (CourseeID->Length == 0|| Bitt->Length==0)
+			{
+				MessageBox::Show("Please Enter all fields", "Incomplete", MessageBoxButtons::OK); return;
+			}
+			int katt = Convert::ToInt32(Bitt);
+			if (katt != Captcha)
+			{
+				MessageBox::Show("Please Enter The correct Captcha Code", "Are you Human?", MessageBoxButtons::OK); return;
+			}
+
+			try
+			{
+				String^ connString = "Data Source=localhost\\sqlexpress;Initial Catalog=" + "United Education System" + "; Integrated Security = True";
+				SqlConnection sqlConn(connString);
+				sqlConn.Open();
+
+				String^ sqlQuery = "delete from Course where ID = @ID and School_ID = @meme";
+				SqlCommand command(sqlQuery, % sqlConn);
+				command.Parameters->AddWithValue("@ID", CourseeID);
+				command.Parameters->AddWithValue("@meme", MyID);
+				SqlDataReader^ reader = command.ExecuteReader();
+				if (reader->Read())
+				{
+					MessageBox::Show("Course Deleted", "Message", MessageBoxButtons::OK); return;
+				}
+				else
+				{
+					MessageBox::Show("Failed to delete course", "error", MessageBoxButtons::OK); return;
+				}
+				this->RemCourseIDBox->Clear();
+				this->RemCourseCaptcBox->Clear();
+				sqlConn.Close();
+			}
+			catch (Exception^ e)
+			{
+				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
+			}
+		}
+		private: System::Void CourseConfirmbutton_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			int CrsID = CourseNo + 1;
+			String^ Name=this->CourseNameBox->Text;
+			String^ detail=this->CourseDetailBox->Text;
+			String^ katt=this->CourseCaptchBox->Text;
+
+			if (Name->Length == 0 || detail->Length == 0 || katt->Length == 0)
+			{
+				MessageBox::Show("Please Enter all fields", "Incomplete", MessageBoxButtons::OK); return;
+			}
+			int bitt= Convert::ToInt32(katt);
+			if (bitt != Captcha)
+			{
+				MessageBox::Show("Please Enter The correct Captcha Code", "Are you Human?", MessageBoxButtons::OK); return;
+			}
+
+			try
+			{
+				String^ connString = "Data Source=localhost\\sqlexpress;Initial Catalog=" + "United Education System" + "; Integrated Security = True";
+				SqlConnection sqlConn(connString);
+				sqlConn.Open();
+
+				String^ sqlQuery = "insert into Course (Id,Name,Details,School_ID) values (@ID,@Name,@detal,@SchID)";
+				SqlCommand command(sqlQuery, % sqlConn);
+				command.Parameters->AddWithValue("@ID", CrsID);
+				command.Parameters->AddWithValue("@Name", Name);
+				command.Parameters->AddWithValue("@detal", detail);
+				command.Parameters->AddWithValue("@SchID", MyID);
+				SqlDataReader^ reader = command.ExecuteReader();
+				if (reader->Read())
+				{
+					MessageBox::Show("New Course Recorded. ID is :" + CrsID + "  Name is " + Name, "New Course", MessageBoxButtons::OK); return;
+				}
+				else
+				{
+					MessageBox::Show("Failed to Record new Course", "New Course", MessageBoxButtons::OK); return;
+				}
+				this->CourseNameBox->Clear();
+				this->CourseDetailBox->Clear();
+				this->CourseCaptchBox->Clear();
+				sqlConn.Close();
+			}
+			catch (Exception^ e)
+			{
+				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
+			}
+		}
+		private: System::Void RemTechConfirmbutton_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			String^ TechID=this->RemTechIDBox->Text;
+			String^ Bitt=this->RemTechCaptBox->Text;
+			if (TechID->Length == 0 || Bitt->Length == 0)
+			{
+				MessageBox::Show("Please Enter all fields", "Incomplete", MessageBoxButtons::OK); return;
+			}
+			int katt = Convert::ToInt32(Bitt);
+			if (katt != Captcha)
+			{
+				MessageBox::Show("Please Enter The correct Captcha Code", "Are you Human?", MessageBoxButtons::OK); return;
+			}
+
+			try
+			{
+				String^ connString = "Data Source=localhost\\sqlexpress;Initial Catalog=" + "United Education System" + "; Integrated Security = True";
+				SqlConnection sqlConn(connString);
+				sqlConn.Open();
+
+				String^ sqlQuery = "delete from Teacher where ID = @ID and School_ID = @meme";
+				SqlCommand command(sqlQuery, % sqlConn);
+				command.Parameters->AddWithValue("@ID", TechID);
+				command.Parameters->AddWithValue("@meme", MyID);
+				SqlDataReader^ reader = command.ExecuteReader();
+				if (reader->Read())
+				{
+					MessageBox::Show("Teacher Deleted", "Message", MessageBoxButtons::OK); return;
+				}
+				else
+				{
+					MessageBox::Show("Failed to delete Teacher", "error", MessageBoxButtons::OK); return;
+				}
+				this->RemTechIDBox->Clear();
+				this->RemTechCaptBox->Clear();
+				sqlConn.Close();
+			}
+			catch (Exception^ e)
+			{
+				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
+			}
+		}
+		private: System::Void RemStdConfirmbutton_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			this->RemStdIDBox->Clear();
+			this->RemStdCaptchatextBox->Clear();
+			String^ sTdID = this->RemStdIDBox->Text;
+			String^ Bitt = this->RemStdCaptchatextBox->Text;
+			if (sTdID->Length == 0 || Bitt->Length == 0)
+			{
+				MessageBox::Show("Please Enter all fields", "Incomplete", MessageBoxButtons::OK); return;
+			}
+			int katt = Convert::ToInt32(Bitt);
+			if (katt != Captcha)
+			{
+				MessageBox::Show("Please Enter The correct Captcha Code", "Are you Human?", MessageBoxButtons::OK); return;
+			}
+
+			try
+			{
+				String^ connString = "Data Source=localhost\\sqlexpress;Initial Catalog=" + "United Education System" + "; Integrated Security = True";
+				SqlConnection sqlConn(connString);
+				sqlConn.Open();
+
+				String^ sqlQuery = "delete from Student where ID = @ID and School_ID = @meme";
+				SqlCommand command(sqlQuery, % sqlConn);
+				command.Parameters->AddWithValue("@ID", sTdID);
+				command.Parameters->AddWithValue("@meme", MyID);
+				SqlDataReader^ reader = command.ExecuteReader();
+				if (reader->Read())
+				{
+					MessageBox::Show("Student Deleted", "Message", MessageBoxButtons::OK); return;
+				}
+				else
+				{
+					MessageBox::Show("Failed to delete student", "error", MessageBoxButtons::OK); return;
+				}
+				this->RemStdIDBox->Clear();
+				this->RemStdCaptchatextBox->Clear();
+				sqlConn.Close();
+			}
+			catch (Exception^ e)
+			{
+				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
+			}
+		}
+	};
 }

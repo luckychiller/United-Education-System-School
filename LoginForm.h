@@ -1,7 +1,8 @@
 #include "Data.h"
 #pragma once
 
-namespace UED {
+namespace UED 
+{
 	using namespace std;
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -16,7 +17,7 @@ namespace UED {
 	/// </summary>
 	public ref class LoginForm : public System::Windows::Forms::Form
 	{
-	public:
+		public:
 		LoginForm(void)
 		{
 			InitializeComponent();
@@ -25,7 +26,7 @@ namespace UED {
 			//
 		}
 
-	protected:
+		protected:
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
@@ -36,24 +37,16 @@ namespace UED {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ Loginlabel;
-	private: System::Windows::Forms::TextBox^ IDtextBox;
-	private: System::Windows::Forms::TextBox^ PasswordtextBox;
-	private: System::Windows::Forms::Label^ IDlabel;
-	protected:
-
-
-
-	private: System::Windows::Forms::Label^ PasswordLadel;
-	private: System::Windows::Forms::Button^ Loginbutton;
-
-
-
-	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+		private: System::Windows::Forms::Label^ Loginlabel;
+		private: System::Windows::Forms::TextBox^ IDtextBox;
+		private: System::Windows::Forms::TextBox^ PasswordtextBox;
+		private: System::Windows::Forms::Label^ IDlabel;
+		private: System::Windows::Forms::Label^ PasswordLadel;
+		private: System::Windows::Forms::Button^ Loginbutton;
+		private: System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -74,8 +67,7 @@ namespace UED {
 			// 
 			this->Loginlabel->AutoSize = true;
 			this->Loginlabel->BackColor = System::Drawing::Color::Transparent;
-			this->Loginlabel->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->Loginlabel->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
 			this->Loginlabel->Location = System::Drawing::Point(280, 56);
 			this->Loginlabel->Name = L"Loginlabel";
 			this->Loginlabel->Size = System::Drawing::Size(118, 46);
@@ -84,18 +76,15 @@ namespace UED {
 			// 
 			// IDtextBox
 			// 
-			this->IDtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->IDtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
 			this->IDtextBox->Location = System::Drawing::Point(228, 197);
 			this->IDtextBox->Name = L"IDtextBox";
 			this->IDtextBox->Size = System::Drawing::Size(330, 26);
 			this->IDtextBox->TabIndex = 1;
-			this->IDtextBox->TextChanged += gcnew System::EventHandler(this, &LoginForm::textBox1_TextChanged);
 			// 
 			// PasswordtextBox
 			// 
-			this->PasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->PasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Regular,System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->PasswordtextBox->Location = System::Drawing::Point(228, 275);
 			this->PasswordtextBox->Name = L"PasswordtextBox";
 			this->PasswordtextBox->PasswordChar = '*';
@@ -106,8 +95,7 @@ namespace UED {
 			// 
 			this->IDlabel->AutoSize = true;
 			this->IDlabel->BackColor = System::Drawing::Color::Transparent;
-			this->IDlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->IDlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
 			this->IDlabel->Location = System::Drawing::Point(186, 201);
 			this->IDlabel->Name = L"IDlabel";
 			this->IDlabel->Size = System::Drawing::Size(27, 22);
@@ -118,8 +106,7 @@ namespace UED {
 			// 
 			this->PasswordLadel->AutoSize = true;
 			this->PasswordLadel->BackColor = System::Drawing::Color::Transparent;
-			this->PasswordLadel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->PasswordLadel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
 			this->PasswordLadel->Location = System::Drawing::Point(133, 278);
 			this->PasswordLadel->Name = L"PasswordLadel";
 			this->PasswordLadel->Size = System::Drawing::Size(89, 22);
@@ -128,10 +115,8 @@ namespace UED {
 			// 
 			// Loginbutton
 			// 
-			this->Loginbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->Loginbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->Loginbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->Loginbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
 			this->Loginbutton->Location = System::Drawing::Point(323, 408);
 			this->Loginbutton->Name = L"Loginbutton";
 			this->Loginbutton->Size = System::Drawing::Size(75, 28);
@@ -155,19 +140,12 @@ namespace UED {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"LoginForm";
 			this->Text = L"LoginForm";
-			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 		public: Schooldata^ school = nullptr;
-		private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e)
-		{
-		}
-		private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
-		{
-		}
 		private: System::Void Loginbutton_Click(System::Object^ sender, System::EventArgs^ e)
 		{
 			String^ ID = this->IDtextBox->Text;
@@ -200,13 +178,14 @@ namespace UED {
 					school->Name = reader->GetString(1);
 					school->Details = reader->GetString(3);
 					school->Password = reader->GetString(4);
-				
+
 					this->Close();
 				}
 				else
 				{
 					MessageBox::Show("ID or Password incorrect", "Failed to login", MessageBoxButtons::OK);
 				}
+				sqlConn.Close();
 			}
 			catch (Exception^ e)
 			{
