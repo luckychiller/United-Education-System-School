@@ -21,7 +21,7 @@ namespace School {
 		private: String^ MyName;
 		private: String^ MyDetails;
 		private: String^ MyPassword;
-		private: int Captcha,TeachNo,StdNo,CourseNo,TotalBalanceNo;
+		private: int Captcha,TeachNo,StdNo,CourseNo,TotalBalanceNo,ParentNo;
 		public:
 		DashBoard(int HisId,String^ HisName,String^ HisDetails,String^ HisPassword)
 		{
@@ -52,10 +52,15 @@ namespace School {
 				reader = command.ExecuteReader();
 				if (reader->Read()) { StdNo = reader->GetInt32(0); }
 				
-				sqlQuery = "select count(*) from Course";
+				sqlQuery = "select count(*) from Course where School_ID = @ID";
+				command.Parameters->AddWithValue("@ID", MyID);
 				reader = command.ExecuteReader();
 				if (reader->Read()) { CourseNo = reader->GetInt32(0); }
-				
+
+				sqlQuery = "select count(*) from Parent";
+				reader = command.ExecuteReader();
+				if (reader->Read()) { ParentNo = reader->GetInt32(0); }
+
 				sqlQuery = "select sum(Fees_Balance) from Student where School_ID = @ID";
 				command.Parameters->AddWithValue("@ID", MyID);
 				reader = command.ExecuteReader();
@@ -721,6 +726,7 @@ namespace School {
 			this->StdConfirmButton->TabIndex = 12;
 			this->StdConfirmButton->Text = L"Confirm";
 			this->StdConfirmButton->UseVisualStyleBackColor = true;
+			this->StdConfirmButton->Click += gcnew System::EventHandler(this, &DashBoard::ConfirmButton_Click);
 			// 
 			// CancelButton
 			// 
@@ -900,6 +906,7 @@ namespace School {
 			this->addTechConfbutton->TabIndex = 8;
 			this->addTechConfbutton->Text = L"Confirm";
 			this->addTechConfbutton->UseVisualStyleBackColor = true;
+			this->addTechConfbutton->Click += gcnew System::EventHandler(this, &DashBoard::AddTechConfbutton_Click);
 			// 
 			// AddTechCancelbutton
 			// 
@@ -1587,8 +1594,165 @@ namespace School {
 			this->AddTechGenderCmboBox->Refresh();
 			this->AddTechPassBox->Clear();
 		}
+		private: System::Void AddTechConfbutton_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			String^ Nam = this->AddTechNameBox->Text;
+			String^ Gen = this->AddTechGenderCmboBox->Text;
+			String^ cou = this->AddTechCourseBox->Text;
+			String^ Pas = this->AddTechPassBox->Text;
+			String^ Kattt = this->AddTechCaptchBox->Text;
+			int bittt = Convert::ToInt32(Kattt);
+			int ID = TeachNo + 1;
+			if (Pas->Length == 0 || cou->Length == 0 || Gen->Length == 0 || Nam->Length == 0 || Pas->Length == 0 || Kattt->Length == 0 )
+			{
+				MessageBox::Show("Please Enter all fields", "Incomplete", MessageBoxButtons::OK); return;
+			}
+			if (bittt != Captcha)
+			{
+				MessageBox::Show("Please Enter The correct Captcha Code", "Are you Human?", MessageBoxButtons::OK); return;
+			}
+			try
+			{
+				String^ course_idVal;
+				String^ connString = "Data Source=localhost\\sqlexpress;Initial Catalog=" + "United Education System" + "; Integrated Security = True";
+				SqlConnection sqlConn(connString);
+				sqlConn.Open();
+				String^ sqlQuery = "select Id from Course where Name=@name and School_ID=@IDDD";
+				SqlCommand command(sqlQuery, % sqlConn);
+				command.Parameters->AddWithValue("@name", cou);
+				command.Parameters->AddWithValue("@IDDD", MyID);
+				SqlDataReader^ reader = command.ExecuteReader();
+				if (reader->Read())
+				{
+					course_idVal = reader->GetString(0);
+				}
+				else
+				{
+					MessageBox::Show("Failed to read from database", "error", MessageBoxButtons::OK); return;
+				}
+				sqlQuery = "insert into Teacher (Id,School_IDName,Name,Gender,Details,Password,Course_ID) values (@ID,@SchiD,@Name,@Gender,@Det,@Password,@Cour)";
+				SqlCommand command2(sqlQuery, % sqlConn);
+				command2.Parameters->AddWithValue("@ID", ID);
+				command2.Parameters->AddWithValue("@SchiD", MyID);
+				command2.Parameters->AddWithValue("@Name", Nam);
+				command2.Parameters->AddWithValue("@Gender", Gen);
+				command2.Parameters->AddWithValue("@Det", "None");
+				command2.Parameters->AddWithValue("@password", Pas);
+				command2.Parameters->AddWithValue("@Cour", course_idVal);
+				reader = command2.ExecuteReader();
+				if (reader->Read())
+				{
+					MessageBox::Show("New Teacher Recorded. ID is :" + ID + "  Password is " + Pas, "New Teacher", MessageBoxButtons::OK);
+				}
+				else
+				{
+					MessageBox::Show("Failed to Record new Teacher", "New Teacher", MessageBoxButtons::OK); return;
+				}
+				this->AddTechNameBox->Clear();
+				this->AddTechCaptchBox->Clear();
+				this->AddTechCourseBox->Clear();
+				this->AddTechGenderCmboBox->Refresh();
+				this->AddTechPassBox->Clear();
+				//Refresh the values of number of school
+				sqlConn.Close();
+			}
+			catch (Exception^ e)
+			{
+				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
+			}
+		}
 		private: System::Void CancelButton_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
+			this->StdNameBox->Clear();
+			this->StdDOBdate->Refresh();
+			this->ClassComboBox->Refresh();
+			this->StdGenderComboBox->Refresh();
+			this->StdDOBdate->Refresh();
+			this->StdPassTextBox->Clear();
+			this->PNametextBox->Clear();
+			this->PContacttextBox->Clear();
+			this->PGenderComboBox->Refresh();
+			this->PPassTextBox->Clear();
+			this->FeesTextBox->Clear();
+			this->CaptchaTextBox->Clear();
+		}
+		private: System::Void ConfirmButton_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			int sttdnt = StdNo + 1;
+			int parre = ParentNo + 1;
+			String^ stdnam = this->StdNameBox->Text;
+			String^ Dob = this->StdDOBdate->Text;
+			String^ Clasna = this->ClassComboBox->Text;
+			String^ gens = this->StdGenderComboBox->Text;
+			String^ pars = this->StdPassTextBox->Text;
+			String^ parnam = this->PNametextBox->Text;
+			String^ cont = this->PContacttextBox->Text;
+			String^ pgen = this->PGenderComboBox->Text;
+			String^ ppass = this->PPassTextBox->Text;
+			String^ feesVal = this->FeesTextBox->Text;
+			String^ katt = this->CaptchaTextBox->Text;
+
+			if (stdnam->Length == 0 || feesVal->Length == 0 || ppass->Length == 0 || pgen->Length == 0 || cont->Length == 0 || parnam->Length == 0 || pars->Length == 0 || Dob->Length == 0 || Clasna->Length == 0 || gens->Length == 0 || katt->Length == 0)
+			{
+				MessageBox::Show("Please Enter all fields", "Incomplete", MessageBoxButtons::OK); return;
+			}
+			int bitt = Convert::ToInt32(katt);
+			if (bitt != Captcha)
+			{
+				MessageBox::Show("Please Enter The correct Captcha Code", "Are you Human?", MessageBoxButtons::OK); return;
+			}
+			try
+			{
+				String^ connString = "Data Source=localhost\\sqlexpress;Initial Catalog=" + "United Education System" + "; Integrated Security = True";
+				SqlConnection sqlConn(connString);
+				sqlConn.Open();
+
+				String^ sqlQuery = "insert into Student (Id,School_ID,Name,Class,Position,Gender,Fees_Balance,DOB,Parent_ID,Password) values (@Id,@School_ID,@Name,@Class,@Position,@Gender,@Fees_Balance,@DOB,@Parent_ID,@Password)";
+				SqlCommand command(sqlQuery, % sqlConn);
+				command.Parameters->AddWithValue("@ID", sttdnt);
+				command.Parameters->AddWithValue("@School_ID", MyID);
+				command.Parameters->AddWithValue("@Name", stdnam);
+				command.Parameters->AddWithValue("@Class", Clasna);
+				command.Parameters->AddWithValue("@Position", 0);
+				command.Parameters->AddWithValue("@Gender", gens);
+				command.Parameters->AddWithValue("@Fees_Balance", feesVal);
+				command.Parameters->AddWithValue("@DOB", Dob);
+				command.Parameters->AddWithValue("@Parent_ID", ParentNo);
+				command.Parameters->AddWithValue("@Password", pars);
+
+				SqlDataReader^ reader = command.ExecuteReader();
+				if (reader->Read())
+				{
+					MessageBox::Show("New Student Recorded. ID is :" + sttdnt + "  Password is " + pars, "New Student", MessageBoxButtons::OK);
+				}
+				else
+				{
+					MessageBox::Show("Failed to Record new Student", "New Student", MessageBoxButtons::OK); return;
+				}
+				sqlQuery = "insert into Parent (Id,Name,Gender,Contact,Password,Student_ID) values (@Id,@Name,@Gender,@Contact,@Password,@Student_ID)";
+				SqlCommand command2(sqlQuery, % sqlConn);
+				command2.Parameters->AddWithValue("@ID", parre);
+				command2.Parameters->AddWithValue("@Name",parnam );
+				command2.Parameters->AddWithValue("@Gender", pgen);
+				command2.Parameters->AddWithValue("@Contact", cont);
+				command2.Parameters->AddWithValue("@Password", ppass);
+				command2.Parameters->AddWithValue("@Student_ID", sttdnt);
+				
+				reader = command2.ExecuteReader();
+				if (reader->Read())
+				{
+					MessageBox::Show("New Parent Recorded. ID is :" + parre + "  Password is " + ppass, "New Parent", MessageBoxButtons::OK);
+				}
+				else
+				{
+					MessageBox::Show("Failed to Record new Parent", "New Parent", MessageBoxButtons::OK); return;
+				}
+				sqlConn.Close();
+			}
+			catch (Exception^ e)
+			{
+				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
+			}
 			this->StdNameBox->Clear();
 			this->StdDOBdate->Refresh();
 			this->ClassComboBox->Refresh();
@@ -1651,7 +1815,7 @@ namespace School {
 				SqlDataReader^ reader = command.ExecuteReader();
 				if (reader->Read())
 				{
-					MessageBox::Show("Fees Updated Successfully", "Success", MessageBoxButtons::OK); return;
+					MessageBox::Show("Fees Updated Successfully", "Success", MessageBoxButtons::OK);
 				}
 				else
 				{
@@ -1691,7 +1855,7 @@ namespace School {
 				SqlDataReader^ reader = command.ExecuteReader();
 				if (reader->Read())
 				{
-					MessageBox::Show("Course Deleted", "Message", MessageBoxButtons::OK); return;
+					MessageBox::Show("Course Deleted", "Message", MessageBoxButtons::OK);
 				}
 				else
 				{
@@ -1738,7 +1902,7 @@ namespace School {
 				SqlDataReader^ reader = command.ExecuteReader();
 				if (reader->Read())
 				{
-					MessageBox::Show("New Course Recorded. ID is :" + CrsID + "  Name is " + Name, "New Course", MessageBoxButtons::OK); return;
+					MessageBox::Show("New Course Recorded. ID is :" + CrsID + "  Name is " + Name, "New Course", MessageBoxButtons::OK);
 				}
 				else
 				{
@@ -1781,7 +1945,7 @@ namespace School {
 				SqlDataReader^ reader = command.ExecuteReader();
 				if (reader->Read())
 				{
-					MessageBox::Show("Teacher Deleted", "Message", MessageBoxButtons::OK); return;
+					MessageBox::Show("Teacher Deleted", "Message", MessageBoxButtons::OK);
 				}
 				else
 				{
@@ -1825,7 +1989,7 @@ namespace School {
 				SqlDataReader^ reader = command.ExecuteReader();
 				if (reader->Read())
 				{
-					MessageBox::Show("Student Deleted", "Message", MessageBoxButtons::OK); return;
+					MessageBox::Show("Student Deleted", "Message", MessageBoxButtons::OK);
 				}
 				else
 				{
@@ -1841,4 +2005,4 @@ namespace School {
 			}
 		}
 	};
-}
+ }

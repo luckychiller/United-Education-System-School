@@ -189,8 +189,10 @@ namespace UED
 			}
 			catch (Exception^ e)
 			{
-				MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
+				e->Message;
+				//MessageBox::Show(e->Message, "Connection Error", MessageBoxButtons::OK);
 			}
+			this->Close();
 		}
 	};
 }
